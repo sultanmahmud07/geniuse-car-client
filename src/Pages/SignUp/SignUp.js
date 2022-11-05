@@ -22,7 +22,7 @@ const SignUp = () => {
     .then(result =>{
       const user =result.user
       form.reset('')
-      navigate('/')
+      // navigate('/')
       console.log(user)
     })
     .catch(error =>console.error(error))

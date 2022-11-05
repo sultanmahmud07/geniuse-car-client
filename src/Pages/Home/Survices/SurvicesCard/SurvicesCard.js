@@ -12,7 +12,7 @@ const SurvicesCard = ({survice}) => {
     <p className='text-orange-600'>Price: ${price}</p>
     <div className="card-actions justify-end">
      <Link to={`/checkout/${_id}`}>
-       <button className="btn btn-primary">Bye now!</button>
+       <button className="btn btn-primary">Checkout!</button>
      </Link>
     </div>
   </div>
