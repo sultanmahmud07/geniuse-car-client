@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SurvicesCard = ({survice}) => {
   // console.log(survice);
-  const {title, img, price} = survice;
+  const {_id, title, img, price} = survice;
   return (
     <div className="card glass">
   <figure><img src={img} alt="car!"/></figure>
@@ -10,7 +11,9 @@ const SurvicesCard = ({survice}) => {
     <h2 className="card-title font-semibold text-3xl">{title}</h2>
     <p className='text-orange-600'>Price: ${price}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Learn now!</button>
+     <Link to={`/checkout/${_id}`}>
+       <button className="btn btn-primary">Bye now!</button>
+     </Link>
     </div>
   </div>
 </div>

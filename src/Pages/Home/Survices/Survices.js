@@ -4,7 +4,7 @@ import SurvicesCard from './SurvicesCard/SurvicesCard';
 const Survices = () => {
   const [survices, setSurvices] = useState([]);
   useEffect(() =>{
-    fetch('survices.json')
+    fetch('http://localhost:5000/services')
     .then(res => res.json())
     .then(data => setSurvices(data))
   },[])
