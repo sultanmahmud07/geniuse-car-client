@@ -7,6 +7,7 @@ const Survices = () => {
     fetch('http://localhost:5000/services')
     .then(res => res.json())
     .then(data => setSurvices(data))
+    // console.log(survices);
   },[])
   
   return (
