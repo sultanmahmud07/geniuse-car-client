@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LogoBannerImg from "../../assets/images/login/login.svg";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 const Login = () => {
   const {logIn} =useContext(AuthContext);
@@ -28,7 +29,7 @@ const Login = () => {
     form.reset('')
 
     //get jwt token
-    fetch('http://localhost:5000/jwt', {
+    fetch('https://genius-car-server-iota-ebon.vercel.app/jwt', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
@@ -73,6 +74,7 @@ const Login = () => {
               <input className="btn btn-primary text-white" type="submit" value="submit" />
             </div>
           </form>
+          <SocialLogin></SocialLogin>
           
          <div className='text-center'>
          <label className="label justify-center">

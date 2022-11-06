@@ -4,7 +4,7 @@ import SurvicesCard from './SurvicesCard/SurvicesCard';
 const Survices = () => {
   const [survices, setSurvices] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5000/services')
+    fetch('https://genius-car-server-iota-ebon.vercel.app/services')
     .then(res => res.json())
     .then(data => setSurvices(data))
     // console.log(survices);
